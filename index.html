@@ -3,26 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>My GitHub Projects</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 2rem;
             background-color: #f0f2f5;
             color: #1c1e21;
             transition: background-color 0.3s, color 0.3s;
         }
+        body.dark-mode {
+            background-color: #1c1e21;
+            color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
         h1 {
-            font-size: 3rem;
-            font-weight: 300;
+            font-size: 2.5rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+        body.dark-mode h2 {
+            border-bottom-color: #555;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        a {
+            text-decoration: none;
+            color: #0366d6;
+        }
+        body.dark-mode a {
+            color: #58a6ff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            color: #586069;
+            margin-top: 0.25rem;
+        }
+        body.dark-mode p {
+            color: #8b949e;
+        }
+        .toggle-container {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+        }
+        #theme-toggle {
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            line-height: 1;
+        }
+        body.dark-mode #theme-toggle {
+            border-color: #555;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to my projects.</h1>
+    <div class="toggle-container">
+        <button id="theme-toggle">🌓</button>
+    </div>
+    <div class="container">
+        <h1>My GitHub Projects</h1>
+        <h2>Recent Repositories</h2>
+        <ul id="repo-list"></ul>
+    </div>
+
+    <script>
+        const repos = [
+            { name: 'MakeALLFavicons', description: 'Simple little script to make all the different Favicons' },
+            { name: 'Advanced-i2c-to-SD_Card', description: 'Creates an I2C bridge between an SD Card and a master I2C controller.' },
+            { name: 'I2C_SD-Card_Webserver', description: 'Demo of how to use the I2C Card to serve out files from I2C SD-Card' },
+            { name: 'Minimal-I2C-master', description: 'Minimal I2C master routines for all AVR microcontrollers.' },
+            { name: 'I2C-SD', description: 'An SD-card module that allows you to write to and read from files on an SD card using I2C.' },
+        ];
+
+        const repoList = document.getElementById('repo-list');
+        repos.forEach(repo => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = `https://github.com/syntax1269/${repo.name}`;
+            link.textContent = repo.name;
+            link.target = '_blank';
+
+            const description = document.createElement('p');
+            description.textContent = repo.description;
+
+            listItem.appendChild(link);
+            listItem.appendChild(description);
+            repoList.appendChild(listItem);
+        });
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                themeToggle.textContent = '☀️';
+            } else {
+                themeToggle.textContent = '🌙';
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+                themeToggle.textContent = '🌙';
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+                themeToggle.textContent = '☀️';
+            }
+        });
+    </script>
 </body>
 </html>
