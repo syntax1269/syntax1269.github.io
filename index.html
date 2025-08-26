@@ -3,10 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntax1269's GitHub Projects</title>
-    <meta name="description" content="A curated list of my most recent and interesting projects on GitHub, ranging from embedded systems to web development.">
-    <meta name="keywords" content="github, projects, portfolio, syntax1269, C++, python, embedded systems, i2c, sd card, webserver, OctoPrint, Raspberry Pi">
+    
+    <!-- Primary Meta Tags -->
+    <title>Syntax1269's GitHub Projects | Arduino Libraries, I2C, Embedded Systems & C++ Development</title>
+    <meta name="title" content="Syntax1269's GitHub Projects | Arduino Libraries, I2C, Embedded Systems & C++ Development">
+    <meta name="description" content="Explore syntax1269's open-source GitHub projects: Self-Adjusting I2C Library, Arduino development tools, embedded systems solutions, C++ libraries, Python automation scripts, and innovative microcontroller projects for makers and developers.">
+    <meta name="keywords" content="syntax1269, github projects, arduino library, i2c library, self-adjusting i2c, embedded systems, c++ development, python scripts, microcontroller projects, avr programming, esp8266, esp32, raspberry pi, octoprint, sd card interface, webserver, open source, maker projects, electronics, firmware development, arduino ide, platformio">
     <meta name="author" content="syntax1269">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://syntax1269.github.io/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://syntax1269.github.io/">
+    <meta property="og:title" content="Syntax1269's GitHub Projects | Arduino Libraries & Embedded Systems">
+    <meta property="og:description" content="Discover innovative open-source projects including Self-Adjusting I2C Library, Arduino tools, and embedded systems solutions by syntax1269.">
+    <meta property="og:image" content="https://syntax1269.github.io/assets/preview.png">
+    <meta property="og:site_name" content="Syntax1269 GitHub Portfolio">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://syntax1269.github.io/">
+    <meta property="twitter:title" content="Syntax1269's GitHub Projects | Arduino Libraries & Embedded Systems">
+    <meta property="twitter:description" content="Explore cutting-edge Arduino libraries, I2C solutions, and embedded systems projects by syntax1269.">
+    <meta property="twitter:image" content="https://syntax1269.github.io/assets/preview.png">
+    <meta property="twitter:creator" content="@syntax1269">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#0366d6">
+    <meta name="msapplication-TileColor" content="#0366d6">
+    <meta name="application-name" content="Syntax1269 Portfolio">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "syntax1269",
+      "url": "https://syntax1269.github.io/",
+      "sameAs": [
+        "https://github.com/syntax1269"
+      ],
+      "jobTitle": "Software Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Open Source Community"
+      },
+      "knowsAbout": [
+        "Arduino Programming",
+        "Embedded Systems",
+        "C++ Development",
+        "Python Programming",
+        "I2C Communication",
+        "Microcontroller Programming",
+        "Electronics",
+        "Firmware Development"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://syntax1269.github.io/"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Syntax1269's GitHub Projects",
+      "description": "A collection of open-source projects focusing on Arduino libraries, embedded systems, and development tools",
+      "url": "https://syntax1269.github.io/",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 1,
+          "name": "Self-Adjusting-I2C-Library",
+          "description": "A comprehensive Arduino library that enhances the standard Wire.h library with intelligent, self-adjusting I2C timing optimization, error recovery, and performance monitoring.",
+          "programmingLanguage": "C++",
+          "codeRepository": "https://github.com/syntax1269/Self-Adjusting-I2C-Library",
+          "keywords": "Arduino, I2C, Library, Embedded Systems, C++"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 2,
+          "name": "Advanced-i2c-to-SD_Card",
+          "description": "This C++ project implements a sophisticated I2C to SD card bridge, utilizing an ATtiny1614 enabling microcontrollers to easily read from and write to an SD card over the I2C bus.",
+          "programmingLanguage": "C++",
+          "codeRepository": "https://github.com/syntax1269/Advanced-i2c-to-SD_Card",
+          "keywords": "I2C, SD Card, ATtiny1614, Embedded Systems, Data Logging"
+        }
+      ]
+    }
+    </script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -82,17 +175,106 @@
         body.dark-mode #theme-toggle {
             border-color: #555;
         }
+        .intro {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #586069;
+            font-weight: 300;
+        }
+        body.dark-mode .intro {
+            color: #8b949e;
+        }
+        .technologies {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e1e4e8;
+        }
+        body.dark-mode .technologies {
+            border-top-color: #30363d;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .tech-tag {
+            background-color: #f1f8ff;
+            color: #0366d6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #c8e1ff;
+        }
+        body.dark-mode .tech-tag {
+            background-color: #0d1117;
+            color: #58a6ff;
+            border-color: #21262d;
+        }
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e1e4e8;
+            text-align: center;
+            color: #586069;
+            font-size: 0.875rem;
+        }
+        body.dark-mode footer {
+            border-top-color: #30363d;
+            color: #8b949e;
+        }
+        footer a {
+            color: #0366d6;
+            font-weight: 500;
+        }
+        body.dark-mode footer a {
+            color: #58a6ff;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
-    <div class="toggle-container">
-        <button id="theme-toggle">🌓</button>
-    </div>
-    <div class="container">
-        <h1>My Little GitHub Projects</h1>
-        <h2>Recent Repositories</h2>
-        <ul id="repo-list"></ul>
-    </div>
+    <header>
+        <div class="toggle-container">
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <header>
+            <h1>Syntax1269's Open Source GitHub Projects</h1>
+            <p class="intro">Innovative Arduino libraries, embedded systems solutions, and development tools for makers and engineers worldwide.</p>
+        </header>
+        
+        <section>
+            <h2>Featured Arduino & Embedded Systems Projects</h2>
+            <ul id="repo-list" role="list"></ul>
+        </section>
+        
+        <section class="technologies">
+            <h3>Technologies & Expertise</h3>
+            <div class="tech-tags">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">I2C Communication</span>
+                <span class="tech-tag">Embedded Systems</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">ESP8266/ESP32</span>
+                <span class="tech-tag">AVR Programming</span>
+                <span class="tech-tag">Raspberry Pi</span>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 syntax1269. Open source projects available on <a href="https://github.com/syntax1269" target="_blank" rel="noopener">GitHub</a>.</p>
+    </footer>
 
     <script>
         const repos = [
@@ -106,16 +288,34 @@
         ];
 
         const repoList = document.getElementById('repo-list');
-        repos.forEach(repo => {
+        repos.forEach((repo, index) => {
             const listItem = document.createElement('li');
+            listItem.setAttribute('itemscope', '');
+            listItem.setAttribute('itemtype', 'https://schema.org/SoftwareSourceCode');
+            
             const link = document.createElement('a');
             link.href = `https://github.com/syntax1269/${repo.name}`;
             link.textContent = repo.name;
             link.target = '_blank';
+            link.rel = 'noopener';
+            link.setAttribute('itemprop', 'codeRepository');
+            link.setAttribute('aria-label', `View ${repo.name} project on GitHub`);
 
             const description = document.createElement('p');
             description.textContent = repo.description;
+            description.setAttribute('itemprop', 'description');
 
+            // Add hidden metadata for SEO
+            const hiddenName = document.createElement('meta');
+            hiddenName.setAttribute('itemprop', 'name');
+            hiddenName.content = repo.name;
+            
+            const hiddenLang = document.createElement('meta');
+            hiddenLang.setAttribute('itemprop', 'programmingLanguage');
+            hiddenLang.content = 'C++';
+
+            listItem.appendChild(hiddenName);
+            listItem.appendChild(hiddenLang);
             listItem.appendChild(link);
             listItem.appendChild(description);
             repoList.appendChild(listItem);
